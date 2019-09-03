@@ -16,7 +16,7 @@ labels = [
 ]
 num_classes = len(labels)
 
-epochs = 20
+epochs = 5
 batch_size = 200
 image_width = 28
 image_height = 28
@@ -28,11 +28,13 @@ model_file = 'my_model.h5'
 
 def preprocessDataFrame(df):
   data = df.values
-  X = data[:, 1:] # All pixel{N} columns
-  Y = data[:, 0] # First column
+  np.random.shuffle(data)
+
+  X = data[:, 1:] / 255.0 # All pixel{N} columns
+  Y = data[:, 0].astype(np.int32) # First column
 
   # Reshape (N, 784) => (N, 28, 28, 1) because Conv2D layers require 4 dimensions
-  X = np.reshape(X, (len(X), image_width, image_height, 1))
+  X = np.reshape(X, (-1, image_width, image_height, 1))
 
   return X, Y
 
