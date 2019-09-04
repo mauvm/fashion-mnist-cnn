@@ -4,7 +4,7 @@ My implementation of a Convolutional Neural Network for the [Fashion MNIST](http
 
 I've built this in preparation for the [Deep Learning: Advanced Computer Vision](https://www.udemy.com/advanced-computer-vision/) course on Udemy and improved it based on the course material.
 
-It achieves an accuracy of **92.3%** after training for **5 epochs**.
+It achieves an accuracy of **92.7%** after training for **5 epochs**.
 
 ## Usage
 
@@ -33,24 +33,24 @@ Next up, train the model (runs for 20 epochs):
 ```bash
 python train.py
 # Epoch 1/5
-# 60000/60000 [==============================] - 272s 5ms/sample - loss: 0.5562 - acc: 0.8066
+# 60000/60000 [==============================] - 246s 4ms/sample - loss: 0.5674 - acc: 0.8041
 # Epoch 2/5
-# 60000/60000 [==============================] - 265s 4ms/sample - loss: 0.3098 - acc: 0.8898
+# 60000/60000 [==============================] - 248s 4ms/sample - loss: 0.3157 - acc: 0.8855
 # Epoch 3/5
-# 60000/60000 [==============================] - 265s 4ms/sample - loss: 0.2496 - acc: 0.9104
+# 60000/60000 [==============================] - 247s 4ms/sample - loss: 0.2597 - acc: 0.9063
 # Epoch 4/5
-# 60000/60000 [==============================] - 267s 4ms/sample - loss: 0.2165 - acc: 0.9222
+# 60000/60000 [==============================] - 246s 4ms/sample - loss: 0.2248 - acc: 0.9185
 # Epoch 5/5
-# 60000/60000 [==============================] - 267s 4ms/sample - loss: 0.1892 - acc: 0.9314
+# 60000/60000 [==============================] - 242s 4ms/sample - loss: 0.1932 - acc: 0.9303
 ```
 
 Finally test the model:
 
 ```bash
 python test.py
-# 10000/10000 [==============================] - 5s 459us/sample - loss: 0.2107 - acc: 0.9232
-# Loss 0.2106759150236845
-# Accuracy 0.9232
+# 10000/10000 [==============================] - 5s 453us/sample - loss: 0.2025 - acc: 0.9268
+# Loss 0.20249984654188155
+# Accuracy 0.9268
 ```
 
 See [config.py](./config.py) and [model.py](./model.py) for the configuration and model.
