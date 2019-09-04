@@ -10,9 +10,10 @@ X_train, Y_train = preprocessDataFrame(df)
 
 # Fit model
 model = createModel()
-r = model.fit(X_train, oneHotEncodeY(Y_train), epochs = epochs, batch_size = batch_size)
+r = model.fit(X_train, oneHotEncodeY(Y_train),
+              epochs=epochs, batch_size=batch_size)
 
-# Save weights
+# Save model and weights
 model.save(model_file)
 
 # Plot results
